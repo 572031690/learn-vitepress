@@ -1,0 +1,34 @@
+<!--
+ * @Author: mjh
+ * @Date: 2023-03-13 00:11:29
+ * @LastEditors: mjh
+ * @LastEditTime: 2023-03-13 00:11:40
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>全局引入</h1>
+    <div id="app"></div>
+    <script type="module">
+      import { createApp } from "vue/dist/vue.esm-bundler.js";
+      import SmartUI from "../../dist/smart-ui.mjs";
+
+      createApp({
+        template: `
+      <RenderButton/>
+      <TSXButton/>
+      <SFCButton/>
+    `,
+      })
+        .use(SmartUI)
+        .mount("#app");
+    </script>
+  </body>
+</html>
