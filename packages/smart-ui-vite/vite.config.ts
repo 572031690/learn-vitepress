@@ -10,6 +10,7 @@ const rollupOptions = {
     globals: {
       vue: "Vue",
     },
+    assetFileNames: `assets/[name].[ext]`, // 去掉生成文件的 hash 值
   },
 };
 
