@@ -14,24 +14,24 @@ const rollupOptions = {
 };
 
 export default defineConfig({
-    plugins: [vue(), vueJsx(), Unocss()],
-    build: {
-        rollupOptions,
-        minify: "terser",
-        sourcemap: true,
-        cssCodeSplit: true,  // 独立输出 css 样式
-        lib: {
-        entry: "./src/entry.ts",
-        name: "SmartUI",
-        fileName: "smart-ui",
-        formats: ["es", "umd", "iife"],
-        },
+  plugins: [vue(), vueJsx(), Unocss()],
+  build: {
+    rollupOptions,
+    minify: "terser",
+    sourcemap: true,
+    cssCodeSplit: true, // 独立输出 css 样式
+    lib: {
+      entry: "./src/entry.ts",
+      name: "SmartUI",
+      fileName: "smart-ui",
+      formats: ["es", "umd", "iife"],
     },
-    test: {
-        globals: true,
-        environment: "happy-dom",
-        transformMode: {
-            web: [/.[tj]sx$/],
-        },
-    }
+  },
+  test: {
+    globals: true,
+    environment: "happy-dom",
+    transformMode: {
+      web: [/.[tj]sx$/],
+    },
+  },
 });
