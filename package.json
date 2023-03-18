@@ -5,16 +5,20 @@
   "main": "index.js",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "dev": "vite"
+    "dev": "vite",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "vite": "^3.2.5"
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
+    "husky": "^8.0.3",
     "vue": "^3.2.47"
   }
 }
