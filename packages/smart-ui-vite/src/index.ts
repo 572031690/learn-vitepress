@@ -1,12 +1,23 @@
-import UButton from "./button";
-import { createApp } from "vue/dist/vue.esm-bundler.js";
+/*
+ * @Author: mjh
+ * @Date: 2023-03-13 00:07:00
+ * @LastEditors: mjh
+ * @LastEditTime: 2023-03-19 00:05:55
+ * @Description:
+ */
+import { App } from "vue";
+import RenderButton from "./button/render-button";
+import SFCButton from "./button/sfc-button.vue";
+import TSXButton from "./button/tsx-button";
+import indexButton from "./button";
 
-createApp({
-  template: `<div>
-        <UButton color="red" icon="search">红色按钮</UButton>
-        <UButton color="gray" icon="edit">绿色按钮</UButton>
-        <UButton color="yellow" icon="check">绿色按钮</UButton>
-    </div>`,
-})
-  .component(UButton.name, UButton)
-  .mount("#app");
+export { RenderButton, SFCButton, TSXButton };
+
+export default {
+  install(app: App): void {
+    app.component(RenderButton.name, RenderButton);
+    app.component(SFCButton.name, SFCButton);
+    app.component(TSXButton.name, TSXButton);
+    app.component(indexButton.name, indexButton);
+  },
+};

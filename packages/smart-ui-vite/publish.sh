@@ -6,6 +6,6 @@ echo "请进行登录操作"
 npm login
 echo "-------publishing------"
 npm publish
-npm config set registry=https://registry.npm.taobao.org
+npm config set registry=http://registry.npmmirror.com
 echo "发布完成"
 exit

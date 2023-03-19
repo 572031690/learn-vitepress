@@ -1,8 +1,8 @@
 {
   "name": "smart-ui-test",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.ts",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -41,6 +41,7 @@
     "vue": "^3.2.47"
   },
   "dependencies": {
-    "typescript": "^5.0.2"
+    "typescript": "^5.0.2",
+    "unocss": "^0.50.4"
   }
 }
